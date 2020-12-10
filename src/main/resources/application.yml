@@ -1,1 +1,15 @@
-
+services:
+  timeOutInMilliSecs: 8000
+  groupme:
+    baseURL: https://api.groupme.com/v3
+    endpoints:
+      getGroups: /groups?omit=memberships
+      getFormerGroups: /groups/former
+      getSpecificGroup: /groups/{groupId}
+      postCreateGroup: /groups
+      postUpdateGroup: /groups/{groupId}/update
+      postDestroyGroup: /groups/{groupId}/destroy
+      postJoinGroup: /groups/{groupId}/join/{shareToken}
+      postRejoinGroup: /groups/join
+      postChangeOwners: /groups/change_owners
+      postAddMember: /groups/{groupId}/add
