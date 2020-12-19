@@ -31,6 +31,5 @@ public class GroupMeController {
         for (GroupEntity e : result) {
             groupRepository.save(e);
         }
-        //TODO allow for some kind of progression indicator
     }
 }
