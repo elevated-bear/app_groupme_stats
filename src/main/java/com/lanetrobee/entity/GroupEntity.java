@@ -1,12 +1,16 @@
 package com.lanetrobee.entity;
 
-import lombok.Data;
+import lombok.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
 @Data
+@Document(collection = "groups")
 public class GroupEntity {
-    private String id;
+    @Id
+    private Integer id;
     private String group_id;
     private String name;
     private String phone_number;
