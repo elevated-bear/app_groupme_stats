@@ -1,6 +1,6 @@
 package com.lanetrobee.repository;
 
-import com.lanetrobee.entity.GroupEntity;
+import com.lanetrobee.entity.group.GroupEntity;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface GroupRepository extends MongoRepository<GroupEntity, Integer> {

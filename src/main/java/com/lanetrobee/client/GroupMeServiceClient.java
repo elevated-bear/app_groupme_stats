@@ -1,6 +1,6 @@
 package com.lanetrobee.client;
 
-import com.lanetrobee.entity.GroupEntity;
+import com.lanetrobee.entity.group.GroupEntity;
 import com.lanetrobee.entity.GroupMeResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -21,6 +21,16 @@ public class GroupMeServiceClient {
     String gmToken;
 
     public GroupMeResponseEntity<GroupEntity> getGroups(String destination) {
+        String url = baseURL.concat(destination);
+        String authURL = addAuthToken(url);
+        return webclient.get()
+                .uri(authURL)
+                .retrieve()
+                .bodyToMono(new ParameterizedTypeReference<GroupMeResponseEntity<GroupEntity>>() {})
+                .block();
+    }
+
+    public GroupMeResponseEntity<GroupEntity> getMessages(String destination) {
         String url = baseURL.concat(destination);
         String authURL = addAuthToken(url);
         return webclient.get()

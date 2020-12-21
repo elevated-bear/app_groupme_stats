@@ -1,4 +1,4 @@
-package com.lanetrobee.entity;
+package com.lanetrobee.entity.group;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;

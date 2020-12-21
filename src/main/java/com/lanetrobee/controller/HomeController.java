@@ -1,6 +1,6 @@
 package com.lanetrobee.controller;
 
-import com.lanetrobee.entity.GroupEntity;
+import com.lanetrobee.entity.group.GroupEntity;
 import com.lanetrobee.service.GroupMeService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

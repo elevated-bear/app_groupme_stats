@@ -2,7 +2,7 @@ package com.lanetrobee.service;
 
 import com.lanetrobee.client.GroupMeServiceClient;
 import com.lanetrobee.configuration.properties.ApplicationProperties;
-import com.lanetrobee.entity.GroupEntity;
+import com.lanetrobee.entity.group.GroupEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
